@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import Footer from "./components/footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -11,10 +12,32 @@ export const metadata = {
   description: "UX • Product • Design",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+// export default function RootLayout({ children }: { children: React.ReactNode }) {
+//   return (
+//     <html lang="en" className={spaceGrotesk.className}>
+//       <body className={spaceGrotesk.className}>{children}</body>
+//     </html>
+//   );
+// }
+
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        {/* Wrap content so footer goes to bottom */}
+        <div className="flex min-h-screen flex-col">
+          {/* PAGE CONTENT */}
+          <main className="flex-1">{children}</main>
+
+          {/* FOOTER */}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
@@ -26,6 +49,8 @@ const playfair = Playfair_Display({
   weight: ["500", "600", "700"],
   style: ["italic"],
 });
+
+
 
 
 

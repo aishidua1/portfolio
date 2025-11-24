@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <main
       className="min-h-screen text-slate-900"
-      style={{ backgroundColor: "#FDF0D5" }}
+      style={{ backgroundColor: "#FAF0E6" }}
     >
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-4 py-12 md:px-6 md:py-16">
         {/* Top: intro + back link */}
@@ -77,22 +77,6 @@ export default function AboutPage() {
               experiences. My mission is clear: to bridge the gap between art and technology, 
               ensuring that digital solutions are accessible to all.
             </p>
-            {/* <p>
-              Recently, I&apos;ve been working on projects around{" "}
-              <span className="font-medium">
-                social media and wellbeing, weather experiences, and
-                productivity tools
-              </span>
-              . I like designing not just for single screens, but for the
-              services and ecosystems around them.
-            </p>
-            <p>
-              Outside of class and studio work, I explore{" "}
-              <span className="font-medium">entrepreneurship</span> and{" "}
-              <span className="font-medium">data-driven decision making</span> —
-              building experiments, dashboards, and small tools that help
-              people see patterns in their own behavior.
-            </p> */}
           </motion.div>
 
           {/* Right: quick facts */}

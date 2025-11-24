@@ -76,8 +76,11 @@ export default function HomePage() {
   );
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#FDF0D5" }}>
+    <main className="min-h-screen" style={{ backgroundColor: "#FAF0E6" }}>
        <div className="relative mx-auto flex max-w-5xl flex-col gap-16 px-4 py-12 md:px-6 md:py-16">
+        <section>
+          
+        </section>
         {/* Hero */}
         <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] md:items-center">
           <div className="space-y-6">
@@ -88,7 +91,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white-900/60 px-3 py-1 text-xs text-slate-800"
             >
               <span className="h-2 w-2 rounded-full bg-pink-400" />
-              Currently @ Duke University studying Design & Tech Innovation
+              Currently @ Duke University getting a Master's in Design & Tech Innovation
             </motion.div>
             
             <motion.h1
@@ -134,7 +137,9 @@ export default function HomePage() {
               </a>
             </motion.div> */}
           </div>
-
+<section>
+          
+        </section>
           {/* Bubble-style quick nav */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -163,16 +168,16 @@ export default function HomePage() {
               </p>
             </div>
           </motion.div>
-        </section>
 
+        </section>
+        <section>
+          
+        </section>
         {/* Work section */}
         <section id="work" className="space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="text-xl font-semibold sm:text-2xl">Selected work</h2>
-              <p className="text-sm text-slate-500">
-                A few projects that represent how I think and build.
-              </p>
+              <h2 className="text-xl font-semibold sm:text-2xl">Case Studies</h2>
             </div>
 {/* 
             Category filter
@@ -204,10 +209,13 @@ export default function HomePage() {
         </section>
 
         {/* Tiny personal line */}
-        <section className="border-t border-slate-800 pt-6 text-xs text-slate-500">
+        {/* <section className="border-t border-slate-800 pt-6 text-xs text-slate-500">
           <p>
             Fueled by iced cofee, many iterations, and hours listening to music on Spotify.
           </p>
+        </section> */}
+        <section>
+
         </section>
       </div>
     </main>
