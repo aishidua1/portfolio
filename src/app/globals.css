@@ -5,12 +5,10 @@
   --foreground: #171717; 
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
-}
+} */
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -25,7 +23,7 @@ body {
 }
 
 :root {
-  --section-space: 8rem; /* You can increase to 10rem for even more breathing room */
+  --section-space: 10rem; 
   --line-height-body: 1.75;
 }
 

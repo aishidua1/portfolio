@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -34,7 +35,7 @@ const PROJECTS: Project[] = [
     image: "/projects/mindfulness.png",
   },
   {
-    slug: "Chordify",
+    slug: "chordify",
     title: "Chordify",
     subtitle: "A learning management platform allowing users to easily navigate through and communicate with each other.",
     role: "Product • Interaction Design",
@@ -54,7 +55,7 @@ const PROJECTS: Project[] = [
     image: "/projects/tulip.png",
   },
   {
-    slug: "Flora & Fauna",
+    slug: "flora-and-fauna",
     title: "Flora & Fauna",
     subtitle: "A flower delivery app to make it easy for the user to order flowers for their loved ones.",
     role: "UX Design • Product",
@@ -84,9 +85,9 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-800"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white-900/60 px-3 py-1 text-xs text-slate-800"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="h-2 w-2 rounded-full bg-pink-400" />
               Currently @ Duke University studying Design & Tech Innovation
             </motion.div>
             
@@ -94,13 +95,11 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl"
+              className="text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl text-slate-900"
             >
-              <span className="block text-base font-normal text-slate-500 sm:text-lg mb-1">
-                Hi! My name is
-              </span>
+              Hi, I&apos;m{" "}
               <span
-                className={`${playfair.className} block text-[clamp(3rem,5vw,4.5rem)] leading-tight text-blue-500`}
+                className={`${playfair.className} block text-[clamp(3rem,5vw,4.5rem)] leading-tight text-pink-400`}
               >
                 Aishi!
               </span>
@@ -115,7 +114,7 @@ export default function HomePage() {
               A UI/UX/product designer focused on creating innovative, user-centric solutions by focusing on using empathy to truly understand the user.
             </motion.p>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -131,9 +130,9 @@ export default function HomePage() {
                 href="/about"
                 className="rounded-full border border-slate-600 px-4 py-2 text-slate-500 hover:border-slate-300"
               >
-                About &amp; CV
+                About
               </a>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Bubble-style quick nav */}
@@ -143,7 +142,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="grid gap-4 text-sm md:justify-items-end"
           >
-            <div className="rounded-2xl border border-slate-800 bg-white-900/60 p-4 shadow-lg shadow-emerald-500/10">
+            <div className="rounded-2xl border border-slate-800 bg-white-900/60 p-4 shadow-lg">
               <p className="text-xs uppercase tracking-wide text-slate-500">
                 Choose a bubble
               </p>
@@ -154,7 +153,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-slate-800">
+            <div className="rounded-2xl border border-slate-800 bg-white-900/60 p-4 text-slate-800 shadow-lg">
               <p className="text-xs uppercase tracking-wide text-white-500">
                 Focus areas
               </p>
@@ -222,14 +221,14 @@ type BubbleProps = {
 
 function Bubble({ href, label }: BubbleProps) {
   return (
-    <motion.a
-      href={href}
-      whileHover={{ y: -2, scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs text-slate-100 shadow-sm hover:border-emerald-400"
-    >
-      {label}
-    </motion.a>
+    <motion.div whileHover={{ y: -2, scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+      <Link
+        href={href}
+        className="rounded-full border border-slate-700 bg-white/60 px-3 py-1 text-xs text-slate-900 shadow-sm hover:border-slate-900"
+      >
+        {label}
+      </Link>
+    </motion.div>
   );
 }
 
@@ -271,12 +270,12 @@ function ProjectCard({ project }: ProjectCardProps) {
           </span>
           <span className="text-slate-400">{project.year}</span>
         </div>
-        <h3 className="text-base font-semibold text-slate-50 group-hover:text-emerald-200">
+        <h3 className="text-base font-semibold text-slate-50 group-hover:text-pink-200">
           {project.title}
         </h3>
         <p className="text-xs text-slate-300">{project.subtitle}</p>
         <p className="text-xs font-medium text-slate-400">{project.role}</p>
-        <p className="text-xs text-emerald-300 opacity-0 transition-opacity group-hover:opacity-100">
+        <p className="text-xs text-pink-300 opacity-0 transition-opacity group-hover:opacity-100">
           Open case study →
         </p>
       </div>
