@@ -246,48 +246,51 @@ type ProjectCardProps = {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <motion.a
-      href={`/work/${project.slug}`}
-      layout
-      whileHover={{ y: -4, scale: 1.01 }}
-      className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-[0_18px_40px_rgba(15,23,42,0.75)]"
-    >
-      {/* Colored glow */}
-      <div
-        className={`pointer-events-none absolute inset-x-0 top-0 h-32 translate-y-[-40%] bg-gradient-to-br ${project.accent} opacity-30 blur-3xl`}
-      />
-
-      {/* Hover image overlay */}
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover"
-          sizes="100%"
+    <Link href={`/site/projects/${project.slug}`} className="block">
+      <motion.div
+        layout
+        whileHover={{ y: -4, scale: 1.01 }}
+        className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-[0_18px_40px_rgba(15,23,42,0.75)]"
+      >
+        {/* Colored glow */}
+        <div
+          className={`pointer-events-none absolute inset-x-0 top-0 h-32 translate-y-[-40%] bg-gradient-to-br ${project.accent} opacity-30 blur-3xl`}
         />
-        {/* Dark overlay so text is still readable */}
-        <div className="absolute inset-0 bg-slate-950/60" />
-      </div>
 
-      {/* Content stays on top */}
-      <div className="relative z-10 space-y-3">
-        <div className="flex items-center justify-between text-xs text-slate-300">
-          <span className="rounded-full border border-slate-700 bg-slate-900/60 px-2 py-0.5">
-            {project.category}
-          </span>
-          <span className="text-slate-400">{project.year}</span>
+        {/* Hover image overlay */}
+        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="100%"
+          />
+          {/* Dark overlay so text is still readable */}
+          <div className="absolute inset-0 bg-slate-950/60" />
         </div>
-        <h3 className="text-base font-semibold text-slate-50 group-hover:text-pink-200">
-          {project.title}
-        </h3>
-        <p className="text-xs text-slate-300">{project.subtitle}</p>
-        <p className="text-xs font-medium text-slate-400">{project.role}</p>
-        <p className="text-xs text-pink-300 opacity-0 transition-opacity group-hover:opacity-100">
-          Open case study →
-        </p>
-      </div>
-    </motion.a>
+
+        {/* Content stays on top */}
+        <div className="relative z-10 space-y-3">
+          <div className="flex items-center justify-between text-xs text-slate-300">
+            <span className="rounded-full border border-slate-700 bg-slate-900/60 px-2 py-0.5">
+              {project.category}
+            </span>
+            <span className="text-slate-400">{project.year}</span>
+          </div>
+
+          <h3 className="text-base font-semibold text-slate-50 group-hover:text-emerald-200">
+            {project.title}
+          </h3>
+          <p className="text-xs text-slate-300">{project.subtitle}</p>
+          <p className="text-xs font-medium text-slate-400">{project.role}</p>
+          <p className="text-xs text-pink-300 opacity-0 transition-opacity group-hover:opacity-100">
+            Open case study →
+          </p>
+        </div>
+      </motion.div>
+    </Link>
   );
 }
+
 
