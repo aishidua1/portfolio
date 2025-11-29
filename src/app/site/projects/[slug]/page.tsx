@@ -1,334 +1,407 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
-type ProcessStep = {
-  title: string;
-  description: string;
-};
-
-type Project = {
-  slug: string;
-  title: string;
-  subtitle: string;
-  role: string;
-  timeframe: string;
-  tools: string[];
-  overview: string;
-  problem: string;
-  goal: string;
-  myContribution: string;
-  process: ProcessStep[];
-  outcomes: string[];
-};
-
-const PROJECTS: Project[] = [
-  {
-    slug: "calmillini",
-    title: "Calmillini",
-    subtitle:
-      "A central hub of mental health resources designed for UIUC students struggling with stress, anxiety, and mental fatigue.",
-    role: "UX Design • Research",
-    timeframe: "2024",
-    tools: ["Figma", "Miro", "Notion"],
-    overview:
-      "Calmillini is a digital experience that curates campus mental health resources into one clear, student-friendly place. It helps students quickly find the right kind of support without feeling overwhelmed.",
-    problem:
-      "Students knew resources existed, but didn’t know where to start, which options were right for them, or how to compare services.",
-    goal:
-      "Create a centralized, approachable starting point that clarifies available resources and matches students with what they actually need.",
-    myContribution:
-      "Led interviews, synthesized findings, mapped the service ecosystem, and designed the main navigation and resource detail layouts.",
-    process: [
-      {
-        title: "Research",
-        description:
-          "Interviewed students and campus staff to understand awareness, trust, and access barriers around mental health resources."
-      },
-      {
-        title: "Synthesis",
-        description:
-          "Mapped the current journey of seeking support and highlighted drop-off points where students tended to give up."
-      },
-      {
-        title: "Concepting",
-        description:
-          "Explored multiple structures for organizing resources and landed on a hub-and-path model centered on student needs."
-      },
-      {
-        title: "Prototyping",
-        description:
-          "Created mid- and high-fidelity screens in Figma, focusing on clear copy, destigmatizing language, and visual hierarchy."
-      },
-      {
-        title: "Testing",
-        description:
-          "Ran usability tests with students and iterated on navigation labels, filtering, and the first-time experience."
-      }
-    ],
-    outcomes: [
-      "Students reported feeling less overwhelmed when viewing resources in one place.",
-      "Helped surface gaps in existing campus communication around where to start.",
-      "Provided a concrete prototype for future partnership conversations with campus services."
-    ]
-  },
-  {
-    slug: "chordify",
-    title: "Chordify",
-    subtitle:
-      "A learning management platform allowing users to easily navigate through and communicate with each other.",
-    role: "Product • Interaction Design",
-    timeframe: "2024",
-    tools: ["Figma", "FigJam"],
-    overview:
-      "Chordify reimagines how learners navigate courses, assignments, and communication by simplifying the core actions students use every day.",
-    problem:
-      "Existing LMS tools are cluttered and inconsistent, forcing students to dig for basic information like deadlines, messages, and resources.",
-    goal:
-      "Design a more intuitive LMS home experience that surfaces what matters today and reduces the cognitive load of managing classes.",
-    myContribution:
-      "Owned the interaction design for the dashboard and course overview, and created flows to unify announcements, tasks, and messages.",
-    process: [
-      {
-        title: "Current State Analysis",
-        description:
-          "Audited existing LMS platforms and captured pain points around navigation, information density, and notifications."
-      },
-      {
-        title: "Task Flows",
-        description:
-          "Mapped essential flows (checking today’s work, messaging instructors, finding materials) and removed unnecessary steps."
-      },
-      {
-        title: "Wireframes",
-        description:
-          "Sketched and prototyped low-fidelity layouts to quickly validate structure and hierarchy with peers."
-      },
-      {
-        title: "Visual Design",
-        description:
-          "Refined the interface with clear typography, color roles, and consistent components for cards and lists."
-      },
-      {
-        title: "Feedback & Iteration",
-        description:
-          "Gathered feedback from students and adjusted how information was grouped so that 'today' always felt manageable."
-      }
-    ],
-    outcomes: [
-      "Helped clarify how a simplified dashboard could reduce context-switching for students.",
-      "Created a reusable component system for future screens.",
-      "Set up a strong foundation for future usability testing and development."
-    ]
-  },
-  {
-    slug: "tulip",
-    title: "Tulip",
-    subtitle:
-      "A platform offering investment opportunities in real estate of boroughs instead of individual properties.",
-    role: "UX Design • Product",
-    timeframe: "2024",
-    tools: ["Figma", "Miro"],
-    overview:
-      "Tulip explores how to make real estate investment more accessible by letting users invest in baskets of properties at the borough level.",
-    problem:
-      "Traditional real estate investing often demands large amounts of capital and deep expertise, which excludes many first-time investors.",
-    goal:
-      "Design an experience that explains complex financial products in simple terms and helps users feel confident making their first investment.",
-    myContribution:
-      "Framed the product concept, mapped key user journeys, and designed core screens for onboarding, exploring boroughs, and reviewing risk.",
-    process: [
-      {
-        title: "Exploratory Research",
-        description:
-          "Spoke with potential first-time investors to understand their goals, fears, and questions about real estate."
-      },
-      {
-        title: "Experience Mapping",
-        description:
-          "Outlined the end-to-end journey from initial curiosity to making a first investment and monitoring performance."
-      },
-      {
-        title: "Information Design",
-        description:
-          "Focused on explaining risk, diversification, and expected returns through approachable visuals and plain language."
-      },
-      {
-        title: "Prototype",
-        description:
-          "Created a clickable Figma prototype showing borough discovery, comparison, and investment confirmation."
-      },
-      {
-        title: "Feedback",
-        description:
-          "Gathered reactions from peers and iterated on clarity of terminology and visual hierarchy."
-      }
-    ],
-    outcomes: [
-      "Improved understanding of how everyday investors think about risk and trust in financial products.",
-      "Produced a prototype suitable for future concept testing with target users.",
-      "Highlighted opportunities for education-first design in fintech."
-    ]
-  },
-  {
-    slug: "flora-and-fauna",
-    title: "Flora & Fauna",
-    subtitle:
-      "A flower delivery app to make it easy for the user to order flowers for their loved ones.",
-    role: "UX Design • Product",
-    timeframe: "2023",
-    tools: ["Figma", "Miro"],
-    overview:
-      "Flora & Fauna simplifies the process of choosing and sending flowers by focusing on intention, occasion, and guidance instead of endless catalog scrolling.",
-    problem:
-      "People often feel unsure what to pick, how much to spend, or whether their order will arrive as expected.",
-    goal:
-      "Design a clearer, warmer experience for selecting bouquets and scheduling deliveries that feels trustworthy and personal.",
-    myContribution:
-      "Defined key flows, designed mobile screens, and crafted copy around occasions, card messages, and delivery details.",
-    process: [
-      {
-        title: "User Interviews",
-        description:
-          "Interviewed people about past experiences sending flowers and frustrations with existing services."
-      },
-      {
-        title: "Journey Mapping",
-        description:
-          "Mapped the emotional journey from deciding to send flowers through to receiving confirmation of delivery."
-      },
-      {
-        title: "Concept Development",
-        description:
-          "Explored concepts centered on occasion-based starting points and curated recommendations."
-      },
-      {
-        title: "UI Design",
-        description:
-          "Designed an end-to-end mobile flow focusing on clarity of options, delivery details, and message personalization."
-      },
-      {
-        title: "Prototype Review",
-        description:
-          "Walked potential users through the prototype and adjusted copy and layout to reduce friction."
-      }
-    ],
-    outcomes: [
-      "Participants felt more confident selecting bouquets and understanding delivery timelines.",
-      "Revealed opportunities to build stronger trust signals into the purchase flow.",
-      "Resulted in a polished mobile case study to showcase e-commerce and flows work."
-    ]
-  }
-];
-
-export default function ProjectCaseStudyPage() {
+export default function ProjectPage() {
   const params = useParams();
-  const slug = params?.slug as string | undefined;
+  const slug = params?.slug as string;
 
-  if (!slug) {
-    return (
-      <main className="mx-auto max-w-4xl px-4 py-12">
-        <p className="text-sm text-slate-700">
-          No project selected. (Slug was missing in the URL.)
-        </p>
-      </main>
-    );
+  if (slug === "calmillini") {
+    return <CalmIlliniPage />;
   }
 
-  const project = PROJECTS.find((p) => p.slug === slug);
-
-  if (!project) {
-    return (
-      <main className="mx-auto max-w-4xl px-4 py-12">
-        <p className="text-sm text-slate-700">
-          No case study found for: <span className="font-mono">{slug}</span>
-        </p>
-      </main>
-    );
-  }
-
+  // Fallback for other projects
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12">
-      {/* Header / Hero */}
-      <section className="mb-10 border-b pb-8">
-        <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-          Case Study
-        </p>
-        <h1 className="mt-2 text-3xl font-semibold text-slate-900">
-          {project.title}
-        </h1>
-        <p className="mt-3 max-w-2xl text-base text-slate-700">
-          {project.subtitle}
-        </p>
+    <main className="mx-auto max-w-4xl px-4 py-12" style={{ backgroundColor: "#FAF0E6" }}>
+      <p className="text-slate-700">Project not found.</p>
+    </main>
+  );
+}
 
-        <div className="mt-6 grid gap-4 text-sm md:grid-cols-3">
-          <div>
-            <h3 className="font-medium text-slate-900">Role</h3>
-            <p className="text-slate-700">{project.role}</p>
-          </div>
-          <div>
-            <h3 className="font-medium text-slate-900">Timeframe</h3>
-            <p className="text-slate-700">{project.timeframe}</p>
-          </div>
-          <div>
-            <h3 className="font-medium text-slate-900">Tools</h3>
-            <p className="text-slate-700">{project.tools.join(", ")}</p>
-          </div>
+function CalmIlliniPage() {
+  return (
+    <main className="min-h-screen" style={{ backgroundColor: "#FAF0E6" }}>
+      <div className="mx-auto max-w-4xl px-6 py-12 md:px-8 md:py-16 lg:px-12">
+        {/* Back Button */}
+        <div className="mb-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-slate-700 transition hover:text-slate-900"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M12.5 5L7.5 10L12.5 15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            home page
+          </Link>
         </div>
-      </section>
 
-      {/* Overview */}
-      <section className="mb-10 space-y-3">
-        <h2 className="text-xl font-semibold text-slate-900">Overview</h2>
-        <p className="text-slate-700">{project.overview}</p>
-      </section>
+        {/* Hero Section with Title */}
+        <section className="mb-12">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">CalmIllini</h4>
+          
+          {/* Hero Image */}
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+            <Image
+              src="/projects/mindfulness.png"
+              alt="CalmIllini mockup"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </section>
 
-      {/* Problem & Goal */}
-      <section className="mb-10 grid gap-6 md:grid-cols-2">
-        <div>
-          <h2 className="text-xl font-semibold text-slate-900">Problem</h2>
-          <p className="mt-2 text-slate-700">{project.problem}</p>
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold text-slate-900">Goal</h2>
-          <p className="mt-2 text-slate-700">{project.goal}</p>
-        </div>
-      </section>
+        {/* Overview Section */}
+        <section className="mb-16">
+          <h3 className="mb-4 text-2xl font-semibold text-slate-900">Overview:</h3>
+          <p className="mb-8 text-lg leading-relaxed text-slate-700">
+            CalmIllini is a digital platform designed for UIUC students struggling with stress, 
+            anxiety, and mental fatigue. Our goal was to create a central hub for mental health 
+            resources, combining journaling, meditation, and peer-based support into a single 
+            accessible experience.
+          </p>
 
-      {/* My Contribution */}
-      <section className="mb-10 space-y-3">
-        <h2 className="text-xl font-semibold text-slate-900">
-          My Contribution
-        </h2>
-        <p className="text-slate-700">{project.myContribution}</p>
-      </section>
-
-      {/* Process */}
-      <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold text-slate-900">Process</h2>
-        <div className="space-y-4">
-          {project.process.map((step, index) => (
-            <div key={index} className="rounded-lg border bg-white p-4">
-              <h3 className="font-medium text-slate-900">{step.title}</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                {step.description}
+          {/* Info Grid */}
+          <div className="grid gap-8 rounded-2xl bg-white/60 p-8 shadow-sm md:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">Problem:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                College students face academic and career pressure, inconsistent access to mental 
+                health resources, and difficulty sustaining healthy coping strategies.
               </p>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Outcomes */}
-      <section className="mb-16">
-        <h2 className="mb-4 text-xl font-semibold text-slate-900">Outcomes</h2>
-        <ul className="list-disc space-y-2 pl-5 text-slate-700">
-          {project.outcomes.map((item, index) => (
-            <li key={index} className="text-sm">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">Solution:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Create a one-stop digital hub that makes resources visible, accessible, and 
+                personalized — supporting students' mental health journeys more effectively.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">My Role:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                UX Designer + Researcher
+              </p>
+            </div>
+
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">Team:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                1 Project Lead, 2 Researchers, 1 UX Designer
+              </p>
+            </div>
+
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">Tools:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Miro, Figma, Canva, Google Slides, Google Forms
+              </p>
+            </div>
+
+            <div>
+              <h4 className="mb-2 font-semibold text-slate-900">Timeline:</h4>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Aug 2024 – Dec 2024
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Understanding the User */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">Understanding the user</h4>
+          <div className="space-y-4 text-slate-700">
+            <p className="leading-relaxed">
+              As college students, we understood that many of our peers struggled with mental health 
+              problems. We decided that it would be best to focus this product on students that went 
+              to the University of Illinois Urbana Champaign and were in the ages between 17 to 22.
+            </p>
+            <p className="leading-relaxed">
+              We decided to go through the process of <strong>segmentation</strong>, starting from 
+              college students and narrowing it to{" "}
+              <strong>"UIUC students dealing with academic anxiety, stress who have an interest in 
+              journaling and meditation."</strong>
+            </p>
+          </div>
+          <a href="/projects/calmillini/understanding user.png" target="_blank" rel="noopener noreferrer" className="relative mt-6 block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <Image
+              src="/projects/calmillini/understanding user.png"
+              alt="Understanding the User"
+              fill
+              className="object-contain"
+            />
+          </a>
+        </section>
+
+        {/* Interview Insights */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">Interview Insights</h4>
+          <div className="mb-8 space-y-3 text-slate-700">
+            <p className="font-medium">Key themes from user interviews:</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>Coping techniques people use bring them delight</li>
+              <li>Aspects of academia bring people pain points</li>
+              <li>Inconsistent resource visibility (saturated, but not easily visible)</li>
+              <li>Lots of Googling required to find resources</li>
+              <li>Techniques people want to learn vary</li>
+              <li>Academic stress impacts student mental health</li>
+              <li>Students tend to engage in familiar activities to combat mental fatigue</li>
+              <li>Students found campus resources satisfactory, but not sustainable</li>
+              <li>Most people found resources through same means</li>
+            </ul>
+          </div>
+
+          {/* Quote */}
+          <blockquote className="border-l-4 border-pink-400 bg-slate-50 p-6 italic">
+            <p className="mb-2 text-lg text-slate-800">
+              "It's frustrating trying to find the resources that UIUC offers. A lot of the 
+              time I get stressed from school work, especially around finals season"
+            </p>
+            <footer className="text-sm font-normal not-italic text-slate-600">
+              — Interview "S"
+            </footer>
+          </blockquote>
+        </section>
+
+        {/* Journey & Empathy Mapping */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">
+            Journey & Empathy Mapping
+          </h4>
+          <p className="mb-6 text-lg leading-relaxed text-slate-700">
+            We created a journey and empathy map to get a better understanding of our overall 
+            goal for the platform, as well as how the user would feel through the flow of CalmIllini.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            <a href="/projects/calmillini/journey map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/journey map.png"
+                alt="Journey Map"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/empathy map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/empathy map.png"
+                alt="Empathy Map"
+                fill
+                className="object-contain"
+              />
+            </a>
+          </div>
+        </section>
+
+        {/* Persona */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">Persona</h4>
+          <a href="/projects/calmillini/persona.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <Image
+              src="/projects/calmillini/persona.png"
+              alt="User Persona"
+              fill
+              className="object-contain"
+            />
+          </a>
+        </section>
+
+        {/* Interest Survey Data */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">
+            Interest Survey Data
+          </h4>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey data1.png"
+                alt="Interest Survey Data 1"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey data2.png"
+                alt="Interest Survey Data 2"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey data3.png"
+                alt="Interest Survey Data 3"
+                fill
+                className="object-contain"
+              />
+            </a>
+          </div>
+        </section>
+
+        {/* Problem Space Survey Data */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">
+            Problem Space Survey Data
+          </h4>
+          <div className="space-y-6">
+            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey 4.png"
+                alt="Problem Space Survey 1"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey5.png"
+                alt="Problem Space Survey 2"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey6.png"
+                alt="Problem Space Survey 3"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/survey7.png"
+                alt="Problem Space Survey 4"
+                fill
+                className="object-contain"
+              />
+            </a>
+          </div>
+        </section>
+
+        {/* Competitive Analysis */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">
+            Competitive Analysis
+          </h4>
+          <p className="mb-4 text-slate-700">
+            New segmented core audience: students experiencing academic stress
+          </p>
+          <div className="mb-6 space-y-2 text-slate-700">
+            <p className="font-medium">SWOT Analysis:</p>
+            <ul className="list-inside list-disc space-y-1 pl-6">
+              <li>MANUAL</li>
+              <li>Mantra Health</li>
+              <li>Koru Mindfulness</li>
+              <li>CAPS</li>
+            </ul>
+          </div>
+          <div className="space-y-3 text-slate-700">
+            <p className="font-medium">Summary/Results:</p>
+            <ul className="list-inside list-disc space-y-2 pl-6">
+              <li>2 out of the 4 competitors <strong>incorporated 1:1 care</strong></li>
+              <li>
+                If a platform had journaling, they did not have meditation
+                <ul className="ml-6 mt-1 list-inside list-circle">
+                  <li>We could incorporate both meditation and journaling</li>
+                </ul>
+              </li>
+              <li>
+                Direct competitor - <strong>Mantra Health</strong>
+                <ul className="ml-6 mt-1 list-inside list-circle space-y-1">
+                  <li>There is already an "all-in-one solution" (Shows our solution is viable)</li>
+                  <li>We need to find what we can add to our platform to <strong>make our solution better</strong></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Sketches */}
+        <section className="mb-16">
+          <h4 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h4>
+          <div className="space-y-6">
+            <a href="/projects/calmillini/sketch1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/sketch1.png"
+                alt="Sketch 1"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/sketch2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/sketch2.png"
+                alt="Sketch 2"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/sketch3.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/sketch3.png"
+                alt="Sketch 3"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a href="/projects/calmillini/sketch4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+              <Image
+                src="/projects/calmillini/sketch4.png"
+                alt="Sketch 4"
+                fill
+                className="object-contain"
+              />
+            </a>
+          </div>
+        </section>
+
+
+        {/* Reflection */}
+        <section className="mb-16">
+          <h3 className="mb-6 text-3xl font-semibold text-slate-900">Reflection</h3>
+          <p className="leading-relaxed text-slate-700">
+            Through this project, I was able to develop my communication skills within a team as 
+            well as learn more about the entire design thinking process. Overall, I learned how to 
+            approach problems with empathy while also embracing failure as part of the process. As 
+            a team, we realized the importance of understanding users' needs deeply before jumping 
+            to solutions. While the above prototypes were initial designs, the next steps would be 
+            to refine the prototype to create a fully functional application and then to move on to 
+            the development phase of the design process.
+          </p>
+        </section>
+
+        {/* Embedded Case Study */}
+        <section className="mb-16">
+          <div className="overflow-hidden rounded-lg border bg-white p-4">
+            <div className="relative aspect-[16/9] w-full">
+              <iframe
+                src="https://www.canva.com/design/DAGrqq2bxX4/iUNDAUDMaPXAumCMp5tv-g/view?embed"
+                className="h-full w-full"
+                allowFullScreen
+                title="CalmIllini Case Study"
+              ></iframe>
+            </div>
+            <p className="mt-4 text-center text-sm text-slate-600">
+              Click to view the case study!
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Button */}
+        <section className="mb-16 text-center">
+          <Link
+            href="/"
+            className="inline-block rounded-full bg-slate-900 px-8 py-4 text-base font-medium text-[#FAF0E6] transition hover:bg-slate-800"
+          >
+            home page
+          </Link>
+        </section>
+      </div>
     </main>
   );
 }

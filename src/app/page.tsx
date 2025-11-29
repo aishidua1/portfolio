@@ -279,7 +279,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             <span className="text-slate-400">{project.year}</span>
           </div>
 
-          <h3 className="text-base font-semibold text-slate-50 group-hover:text-emerald-200">
+          <h3 className="text-base font-semibold text-slate-50 group-hover:text-pink-300">
             {project.title}
           </h3>
           <p className="text-xs text-slate-300">{project.subtitle}</p>
