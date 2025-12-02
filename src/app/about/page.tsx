@@ -92,20 +92,20 @@ export default function AboutPage() {
               </h2>
               <ul className="space-y-1 text-slate-700">
                 <li>🎓 Grad student at Duke (DTI)</li>
-                <li>🧠 Exploring UX, product strategy &amp; systems design</li>
-                <li>💻 Building a portfolio of digital experiences</li>
+                <li>🍁 Sipping on a iced maple butter latte </li>
+                <li>🎧 Listening to Eventually by Tame Impala</li>
               </ul>
             </div>
 
             <div>
               <h2 className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                I enjoy working on
+                I enjoy
               </h2>
               <ul className="space-y-1 text-slate-700">
-                <li>• Research-driven case studies</li>
-                <li>• Dashboards &amp; data storytelling</li>
-                <li>• Service &amp; journey design</li>
-                <li>• Tools that reduce friction and anxiety</li>
+                <li>• Wireframing and prototyping</li>
+                <li>• Learning about new things in the design world</li>
+                <li>• Scrolling on Pinterest to get inspiration for anything and everything</li>
+                <li>• Finding new hobbies that get me moving creatively</li>
               </ul>
             </div>
 
@@ -138,7 +138,7 @@ export default function AboutPage() {
         </section>
 
         {/* Bottom: how I like to work & contact */}
-        <section className="space-y-6 text-sm text-slate-800 sm:text-base">
+        {/* <section className="space-y-6 text-sm text-slate-800 sm:text-base">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <span className="font-medium">people&apos;s stories</span> and{" "}
               <span className="font-medium">evidence from data</span>.
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -169,13 +169,13 @@ export default function AboutPage() {
               about design, tech, and futures.
             </p>
             <Link
-              href="mailto:your.email@duke.edu"
+              href="mailto:aduxjobs@gmail.com"
               className="rounded-full border border-slate-800 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-900 hover:bg-slate-900 hover:text-[#FDF0D5] transition"
             >
               Say hello
             </Link>
           </motion.div>
-        </section>
+        {/* </section> */}
       </div>
     </main>
   );
