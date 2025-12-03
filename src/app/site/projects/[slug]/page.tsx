@@ -45,12 +45,12 @@ function CalmIlliniPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">CalmIllini</h4>
           
           {/* Hero Image */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="relative aspect-square w-128 overflow-hidden rounded-lg mx-auto">
             <Image
               src="/projects/mindfulness.png"
               alt="CalmIllini mockup"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
@@ -180,7 +180,7 @@ function CalmIlliniPage() {
             goal for the platform, as well as how the user would feel through the flow of CalmIllini.
           </p>
           <div className="grid gap-6 md:grid-cols-2">
-            <a href="/projects/calmillini/journey map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/journey map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/journey map.png"
                 alt="Journey Map"
@@ -188,7 +188,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/empathy map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/empathy map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/empathy map.png"
                 alt="Empathy Map"
@@ -202,7 +202,7 @@ function CalmIlliniPage() {
         {/* Persona */}
         <section className="mb-16">
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">Persona</h4>
-          <a href="/projects/calmillini/persona.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+          <a href="/projects/calmillini/persona.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
             <Image
               src="/projects/calmillini/persona.png"
               alt="User Persona"
@@ -217,8 +217,10 @@ function CalmIlliniPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">
             Interest Survey Data
           </h4>
+          <h6 className="mb-6 text-1xl font text-slate-900">click the image to see a more detailed view of the data!</h6>
+
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data1.png"
                 alt="Interest Survey Data 1"
@@ -226,7 +228,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data2.png"
                 alt="Interest Survey Data 2"
@@ -234,7 +236,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data3.png"
                 alt="Interest Survey Data 3"
@@ -251,7 +253,7 @@ function CalmIlliniPage() {
             Problem Space Survey Data
           </h4>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey 4.png"
                 alt="Problem Space Survey 1"
@@ -259,7 +261,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey5.png"
                 alt="Problem Space Survey 2"
@@ -267,7 +269,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey6.png"
                 alt="Problem Space Survey 3"
@@ -275,7 +277,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey7.png"
                 alt="Problem Space Survey 4"
@@ -329,7 +331,7 @@ function CalmIlliniPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h4>
           <h6 className="mb-6 text-1xl font text-slate-900">click the image to see a more detailed view of the sketches!</h6>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <a href="/projects/calmillini/sketch1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/sketch1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/sketch1.png"
                 alt="Sketch 1"
@@ -337,7 +339,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/sketch2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/sketch2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/sketch2.png"
                 alt="Sketch 2"
@@ -345,7 +347,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/sketch3.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/sketch3.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/sketch3.png"
                 alt="Sketch 3"
@@ -353,7 +355,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/sketch4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/sketch4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/sketch4.png"
                 alt="Sketch 4"
@@ -424,7 +426,7 @@ function ChordifyPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">Chordify / Iris Tutor</h4>
           
           {/* Hero Image */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="relative aspect-square w-128 h-96 overflow-hidden rounded-lg mx-auto">
             <Image
               src="/projects/chordify.png"
               alt="Chordify mockup"
@@ -499,7 +501,7 @@ function ChordifyPage() {
         <section className="mb-16">
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">Persona</h4>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <a href="/projects/chordify/persona1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+          <a href="/projects/chordify/persona1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full h-64 overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
             <Image
               src="/projects/chordify/persona1.png"
               alt="persona1"
@@ -507,7 +509,7 @@ function ChordifyPage() {
               className="w-full rounded-xl mb-8"
             />
           </a>
-          <a href="/projects/chordify/persona2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+          <a href="/projects/chordify/persona2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full h-64 overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
             <Image
               src="/projects/chordify/persona2.png"
               alt="persona 2"
@@ -519,13 +521,13 @@ function ChordifyPage() {
         </section>
         
         <section className="mb-16">
-          <h3 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h3>
-          <a href="/projects/chordify/persona2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+          {/* <h3 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h3>
+          <a href="/projects/chordify/persona2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full h-64 overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
             <Image
               src="/projects/chordify/persona2.png"
               alt="persona 2"
               fill
-              className="object-contain"
+              className="w-full rounded-xl mb-8"
             />
           </a>
           <p className="leading-relaxed text-slate-700">
@@ -534,36 +536,64 @@ function ChordifyPage() {
             look like. Shown on the right are some examples of what the basic first 
             screen when clicked on would look like. There were some changes made 
             overall but this is what the designs began with.
-          </p>
+          </p> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  
+          {/* IMAGE */}
+          <div className="relative w-full aspect-square">
+            <Image
+              src="/projects/chordify/sketch.png"
+              alt="chart"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* TEXT */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Sketches</h2>
+            <p className="text-gray-700 leading-relaxed">
+            While the sketches of the website were very basic, they helped build 
+            a solid foundation of what the idea of the platform was supposed to 
+            look like. Shown on the right are some examples of what the basic first 
+            screen when clicked on would look like. There were some changes made 
+            overall but this is what the designs began with.
+            </p>
+          </div>
+
+        </div>
         </section>
 
 
-        {/* Interest Survey Data */}
+        {/* Lofi wireframes */}
         <section className="mb-16">
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">
-            Interest Survey Data
+            LoFi Wireframes
           </h4>
+          After creating some sketches, I went in to create some low-fidelity designs to get a better idea of what the team would want out final prototype to look like.
+
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/chordify/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
-                src="/projects/calmillini/survey data1.png"
-                alt="Interest Survey Data 1"
+                src="/projects/chordify/lofi1.png"
+                alt="lofi 1"
                 fill
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/chordify/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
-                src="/projects/calmillini/survey data2.png"
-                alt="Interest Survey Data 2"
+                src="/projects/chordify/lofi2.png"
+                alt="lofi 2"
                 fill
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
+            <a href="/projects/chordify/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
-                src="/projects/calmillini/survey data3.png"
-                alt="Interest Survey Data 3"
+                src="/projects/chordify/lofi3.png"
+                alt="lofi 3"
                 fill
                 className="object-contain"
               />
@@ -571,86 +601,28 @@ function ChordifyPage() {
           </div>
         </section>
 
-        {/* Problem Space Survey Data */}
+
+        {/* full flow */}
         <section className="mb-16">
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">
-            Problem Space Survey Data
+          HiFi Prototype
           </h4>
-          <div className="space-y-6">
-            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/survey 4.png"
-                alt="Problem Space Survey 1"
-                fill
-                className="object-contain"
+          When creating the flows of the prototype, it was important to ensure 
+          that everything was crisp and clean. Things needed to be organized in 
+          a certain way, and all of the buttons needed to be working so that the 
+          engineers knew what the function of the button would be. 
+
+            <a className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+              <video
+                src="/projects/chordify/flow.mov"
+                controls
+                className="w-full rounded-xl border mb-8"
+                autoPlay={false}
               />
             </a>
-            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/survey5.png"
-                alt="Problem Space Survey 2"
-                fill
-                className="object-contain"
-              />
-            </a>
-            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/survey6.png"
-                alt="Problem Space Survey 3"
-                fill
-                className="object-contain"
-              />
-            </a>
-            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/survey7.png"
-                alt="Problem Space Survey 4"
-                fill
-                className="object-contain"
-              />
-            </a>
-          </div>
+
         </section>
 
-
-        {/* Sketches */}
-        <section className="mb-16">
-          <h4 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h4>
-          <div className="space-y-6">
-            <a href="/projects/calmillini/sketch1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/sketch1.png"
-                alt="Sketch 1"
-                fill
-                className="object-contain"
-              />
-            </a>
-            <a href="/projects/calmillini/sketch2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/sketch2.png"
-                alt="Sketch 2"
-                fill
-                className="object-contain"
-              />
-            </a>
-            <a href="/projects/calmillini/sketch3.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/sketch3.png"
-                alt="Sketch 3"
-                fill
-                className="object-contain"
-              />
-            </a>
-            <a href="/projects/calmillini/sketch4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg border cursor-pointer transition hover:opacity-90">
-              <Image
-                src="/projects/calmillini/sketch4.png"
-                alt="Sketch 4"
-                fill
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </section>
 
 
         {/* Reflection */}

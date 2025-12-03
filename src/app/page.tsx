@@ -44,26 +44,26 @@ const PROJECTS: Project[] = [
     accent: "from-emerald-500 to-lime-400",
     image: "/projects/chordify.png",
   },
-  {
-    slug: "tulip",
-    title: "tulip",
-    subtitle: "A platform offering investment opportunities in real estate of boroughs instead of individual properties.",
-    role: "UX Design • Product",
-    year: "2024",
-    category: "UX / Product",
-    accent: "from-fuchsia-500 to-rose-400",
-    image: "/projects/tulip.png",
-  },
-  {
-    slug: "flora-and-fauna",
-    title: "Flora & Fauna",
-    subtitle: "A flower delivery app to make it easy for the user to order flowers for their loved ones.",
-    role: "UX Design • Product",
-    year: "2023",
-    category: "UX / Product",
-    accent: "from-indigo-500 to-purple-500",
-    image: "/projects/flora.png",
-  },
+  // {
+  //   slug: "tulip",
+  //   title: "tulip",
+  //   subtitle: "A platform offering investment opportunities in real estate of boroughs instead of individual properties.",
+  //   role: "UX Design • Product",
+  //   year: "2024",
+  //   category: "UX / Product",
+  //   accent: "from-fuchsia-500 to-rose-400",
+  //   image: "/projects/tulip.png",
+  // },
+  // {
+  //   slug: "flora-and-fauna",
+  //   title: "Flora & Fauna",
+  //   subtitle: "A flower delivery app to make it easy for the user to order flowers for their loved ones.",
+  //   role: "UX Design • Product",
+  //   year: "2023",
+  //   category: "UX / Product",
+  //   accent: "from-indigo-500 to-purple-500",
+  //   image: "/projects/flora.png",
+  // },
 ];
 
 // const CATEGORIES = ["All", "UX / Product"];
@@ -117,25 +117,6 @@ export default function HomePage() {
               A UI/UX/product designer focused on creating innovative, user-centric solutions by focusing on using empathy to truly understand the user.
             </motion.p>
 
-            {/* <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap gap-3 text-sm"
-            >
-              <a
-                href="#work"
-                className="rounded-full bg-slate-50 px-4 py-2 font-medium text-slate-950 hover:bg-slate-200"
-              >
-                View selected work
-              </a>
-              <a
-                href="/about"
-                className="rounded-full border border-slate-600 px-4 py-2 text-slate-500 hover:border-slate-300"
-              >
-                About
-              </a>
-            </motion.div> */}
           </div>
 <section>
           
@@ -153,7 +134,7 @@ export default function HomePage() {
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Bubble href="#work" label="Case Studies" />
-                <Bubble href="/playground" label="Playground" />
+                {/* <Bubble href="/playground" label="Playground" /> */}
                 <Bubble href="/about" label="About" />
               </div>
             </div>
@@ -163,8 +144,8 @@ export default function HomePage() {
                 Focus areas
               </p>
               <p className="mt-2">
-                UX Research • Interaction Design •
-                Service design • Product strategy
+                UX Design • Product Design •
+                User Research • Data Analysis
               </p>
             </div>
           </motion.div>
