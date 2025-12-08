@@ -44,29 +44,8 @@ const PROJECTS: Project[] = [
     accent: "from-emerald-500 to-lime-400",
     image: "/projects/chordify.png",
   },
-  // {
-  //   slug: "tulip",
-  //   title: "tulip",
-  //   subtitle: "A platform offering investment opportunities in real estate of boroughs instead of individual properties.",
-  //   role: "UX Design • Product",
-  //   year: "2024",
-  //   category: "UX / Product",
-  //   accent: "from-fuchsia-500 to-rose-400",
-  //   image: "/projects/tulip.png",
-  // },
-  // {
-  //   slug: "flora-and-fauna",
-  //   title: "Flora & Fauna",
-  //   subtitle: "A flower delivery app to make it easy for the user to order flowers for their loved ones.",
-  //   role: "UX Design • Product",
-  //   year: "2023",
-  //   category: "UX / Product",
-  //   accent: "from-indigo-500 to-purple-500",
-  //   image: "/projects/flora.png",
-  // },
 ];
 
-// const CATEGORIES = ["All", "UX / Product"];
 
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -114,7 +93,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="max-w-xl text-sm leading-relaxed text-slate-500 sm:text-base"
             >
-              A UI/UX/product designer focused on creating innovative, user-centric solutions by focusing on using empathy to truly understand the user.
+              Designing innovative digital experiences rooted in empathy and by understanding the user in their true form.
             </motion.p>
 
           </div>

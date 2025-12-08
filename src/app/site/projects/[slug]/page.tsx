@@ -179,8 +179,13 @@ function CalmIlliniPage() {
             We created a journey and empathy map to get a better understanding of our overall 
             goal for the platform, as well as how the user would feel through the flow of CalmIllini.
           </p>
-          <div className="grid gap-6 md:grid-cols-2">
-            <a href="/projects/calmillini/journey map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+          <div className="flex flex-col gap-8">
+            <a
+              href="/projects/calmillini/journey map.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90"
+            >
               <Image
                 src="/projects/calmillini/journey map.png"
                 alt="Journey Map"
@@ -188,7 +193,13 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/empathy map.png" target="_blank" rel="noopener noreferrer" className="relative aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+
+            <a
+              href="/projects/calmillini/empathy map.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90"
+            >
               <Image
                 src="/projects/calmillini/empathy map.png"
                 alt="Empathy Map"
@@ -197,7 +208,8 @@ function CalmIlliniPage() {
               />
             </a>
           </div>
-        </section>
+          </section>
+
 
         {/* Persona */}
         <section className="mb-16">
@@ -217,10 +229,9 @@ function CalmIlliniPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">
             Interest Survey Data
           </h4>
-          <h6 className="mb-6 text-1xl font text-slate-900">click the image to see a more detailed view of the data!</h6>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+          <div className="flex flex-col gap-8">
+            <a href="/projects/calmillini/survey data1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data1.png"
                 alt="Interest Survey Data 1"
@@ -228,7 +239,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey data2.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data2.png"
                 alt="Interest Survey Data 2"
@@ -236,7 +247,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative aspect-square w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey data3.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey data3.png"
                 alt="Interest Survey Data 3"
@@ -252,8 +263,8 @@ function CalmIlliniPage() {
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">
             Problem Space Survey Data
           </h4>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+          <div className="flex flex-col gap-8">
+            <a href="/projects/calmillini/survey 4.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey 4.png"
                 alt="Problem Space Survey 1"
@@ -261,7 +272,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey5.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey5.png"
                 alt="Problem Space Survey 2"
@@ -269,7 +280,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey6.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey6.png"
                 alt="Problem Space Survey 3"
@@ -277,7 +288,7 @@ function CalmIlliniPage() {
                 className="object-contain"
               />
             </a>
-            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
+            <a href="/projects/calmillini/survey7.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/survey7.png"
                 alt="Problem Space Survey 4"
@@ -330,7 +341,7 @@ function CalmIlliniPage() {
         <section className="mb-16">
           <h4 className="mb-6 text-3xl font-semibold text-slate-900">Sketches</h4>
           <h6 className="mb-6 text-1xl font text-slate-900">click the image to see a more detailed view of the sketches!</h6>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="flex flex-col gap-8">
             <a href="/projects/calmillini/sketch1.png" target="_blank" rel="noopener noreferrer" className="relative block aspect-video w-full overflow-hidden rounded-lg  cursor-pointer transition hover:opacity-90">
               <Image
                 src="/projects/calmillini/sketch1.png"
